@@ -1,0 +1,11 @@
+<?php
+
+define('MODULE_BOXES_HEADER_SHOPPING_CART_TITLE', 'Warenkorb im Header');
+define('MODULE_BOXES_HEADER_SHOPPING_CART_DESCRIPTION', 'Warenkorbinhalt anzeigen');
+define('MODULE_BOXES_HEADER_SHOPPING_CART_BOX_TITLE', 'Warenkorb');
+define('MODULE_BOXES_HEADER_SHOPPING_CART_BOX_CART_EMPTY', '0 Produkte');
+define('MODULE_BOXES_HEADER_SHOPPING_CART_BOX_ITEM', 'Produkt');
+define('MODULE_BOXES_HEADER_SHOPPING_CART_BOX_ITEMS', 'Produkte');
+define('MODULE_BOXES_HEADER_SHOPPING_CART_SUB_TOTAL', 'Insgesamt:');
+define('MODULE_BOXES_HEADER_SHOPPING_CART_SUCCESS', 'Produkt erfolgreich in den Warenkorb!');
+?>

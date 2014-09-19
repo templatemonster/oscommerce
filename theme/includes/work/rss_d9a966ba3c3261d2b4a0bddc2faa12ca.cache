@@ -1,0 +1,42 @@
+a:12:{s:8:"encoding";s:5:"UTF-8";s:5:"title";s:18:"osCommerce Add-Ons";s:4:"link";s:25:"http://www.oscommerce.com";s:11:"description";s:29:"osCommerce, Sell With Emotion";s:8:"language";s:2:"en";s:9:"copyright";s:29:"Copyright (c) 2014 osCommerce";s:14:"managingEditor";s:19:"hpdl@oscommerce.com";s:11:"image_title";s:10:"osCommerce";s:9:"image_url";s:53:"http://www.oscommerce.com/images/oscommerce_88x31.gif";s:10:"image_link";s:25:"http://www.oscommerce.com";s:5:"items";a:5:{i:0;a:4:{s:5:"title";s:64:"Alteracao no modulo do pagseguro para funcionar na versao 2.2ms2";s:4:"link";s:38:"http://addons.oscommerce.com/info/9126";s:11:"description";s:813:"Fazer o download da ultima versao (Vers&atilde;o: 1.2) do modulo do pagseguro<br />
+<br />
+Alterar o arquivo pagseguro.php (fica dentro do includes/modules/payment/ )<br />
+<br />
+Alterar na linha 521<br />
+$shipping-_setCost($order-_info['shipping_cost']);<br />
+<br />
+Para<br />
+$shipping-_setCost($order-_info['shipping_cost']_0?number_format($order-_info['shipping_cost'],2):'0.00');<br />
+<br />
+Fazer o download da vers&atilde;o do oscommerce 2.3.4:<br />
+http://www.oscommerc...wnload=oscom234<br />
+<br />
+Transferir o arquivo version.php que est&aacute; dentro de includes para a sua loja, tamb&eacute;m dentro da pasta includes.<br />
+<br />
+(ou voc&ecirc; pode criar um arquivo com o nome &quot;version.php&quot; e escrever no arquivo somente &quot;2.3.4&quot; sem aspas.<br />
+<br />
+S&oacute; isso..";s:7:"pubDate";s:31:"Thu, 14 Aug 2014 03:39:47 +0200";}i:1;a:4:{s:5:"title";s:57:"Credit Class, Gift Vouchers & Discount Coupons osC2.3.3.4";s:4:"link";s:38:"http://addons.oscommerce.com/info/9020";s:11:"description";s:484:"This version of CCGV for osCommerce is the one to use. Please ignore all the versions below.<br />
+<br />
+This has been tested on osCommerce 2.3.4.<br />
+<br />
+I have not yet had time to create a detailed installation instruction file so you will have use a file compare program to view the changes.<br />
+<br />
+You should be able to safely drop these files on top of a CLEAN INSTALLATION.<br />
+<br />
+A number of things have been improved and fixed - just too many to mention now.";s:7:"pubDate";s:31:"Thu, 14 Aug 2014 00:39:11 +0200";}i:2;a:4:{s:5:"title";s:32:"Recover Cart Sales for OSC 2.3.1";s:4:"link";s:38:"http://addons.oscommerce.com/info/8333";s:11:"description";s:632:"Per Mort-lemur's post here: http://forums.oscommerce.com/topic/395359-modding-up-a-new-2334-install-documented/?p=1686900<br />
+<br />
+For 2.3.4, in admin/recover_cart_sales.php you have to change all occurences of 'mysql_num_rows' to 'tep_db_num_rows'. I found 7. <br />
+<br />
+After that it works like a charm.<br />
+<br />
+To test, be sure you go to configuration -_ recover cart sales and change Skip Days to 0. After you make the num_rows change, you should see all abandoned carts.<br />
+<br />
+Not a full package, please use the previous package. Only this text and a corrected admin/recover_cart_sales.php file are included.";s:7:"pubDate";s:31:"Wed, 13 Aug 2014 17:22:59 +0200";}i:3;a:4:{s:5:"title";s:26:"Ultimate SEO URLs EDITABLE";s:4:"link";s:38:"http://addons.oscommerce.com/info/7048";s:11:"description";s:418:"English____________<br />
+The format of the URL of the product, regarding its category, look if it was edited to add, but show the name of the default category.<br />
+<br />
+Espa&ntilde;ol___________<br />
+El formato de la URL de producto, referente a su categor&iacute;a, mirar&aacute; si se ha editado para a&ntilde;adirla, sino mostrar&aacute; el nombre de la categor&iacute;a por defecto.<br />
+<br />
+FULL PACKAGE";s:7:"pubDate";s:31:"Wed, 13 Aug 2014 13:52:23 +0200";}i:4;a:4:{s:5:"title";s:20:"checkout payment fix";s:4:"link";s:38:"http://addons.oscommerce.com/info/3526";s:11:"description";s:1010:"This is built upon the work of Kevin Shelton and Brushwood. Thanks to both of them for their previous work. I modified the the placement of the TITLE_PLEASE_SELECT text constant, the Select icon, and the placement of the TEXT_SELECT_PAYMENT_METHOD constant so that the TEXT_SELECT_PAYMENT_METHOD constant does not start at the middle of the box and is not on the first line of the box. This places the TEXT_SELECT_PAYMENT_METHOD constant closer to the left. See the image in the zip file for their placement. There is an image of the modified screen included in the zip file.<br />
+<br />
+Full package enclosed in zip. Added instructions for search and replace since only the complete file was given. This is useful for those who have modified checkout_payment files and need to change only the specified area layout. Simple search and replace of one section of the file. Please check your work and backup the file before you begin! If you find an error in my work, please contact me or update my instructions.";s:7:"pubDate";s:31:"Wed, 13 Aug 2014 01:54:14 +0200";}}s:11:"items_count";i:5;}

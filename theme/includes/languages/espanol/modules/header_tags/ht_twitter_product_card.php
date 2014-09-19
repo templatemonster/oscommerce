@@ -1,0 +1,11 @@
+<?php
+
+  define('MODULE_HEADER_TAGS_TWITTER_PRODUCT_CARD_TITLE', 'Ficha del Producto en Twitter');
+  define('MODULE_HEADER_TAGS_TWITTER_PRODUCT_CARD_DESCRIPTION', 'Añadir etiquetas a la Ficha del Producto en Twitter a su página de información del producto.');
+
+  define('MODULE_HEADER_TAGS_TWITTER_PRODUCT_CARD_TEXT_PRE_ORDER', 'Solicitud de Reserva');
+  define('MODULE_HEADER_TAGS_TWITTER_PRODUCT_CARD_TEXT_IN_STOCK', 'Disponible');
+  define('MODULE_HEADER_TAGS_TWITTER_PRODUCT_CARD_TEXT_OUT_OF_STOCK', 'Agotado');
+  define('MODULE_HEADER_TAGS_TWITTER_PRODUCT_CARD_TEXT_BUY_NOW', 'COMPRAR AHORA');
+  define('MODULE_HEADER_TAGS_TWITTER_PRODUCT_CARD_TEXT_CONTACT_US', 'CONTACTA CON NOSOTROS');
+?>
