@@ -227,7 +227,7 @@
   }
 ?>
   <div class="order-steps">
-    <div id="coProgressBar"></div>
+    <div id="coProgressBar" class="last-step"></div>
     <table class="order-steps-name">
       <tr>
         <td class="checkoutBarFrom"><?php echo '<a href="' . tep_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL') . '" class="checkoutBarFrom">' . CHECKOUT_BAR_DELIVERY . '</a>'; ?></td>
@@ -248,7 +248,7 @@
 </div>
 <script type="text/javascript">
 $('#coProgressBar').progressbar({
-  value: 98
+  value: 100
 });
 </script>
 </form>

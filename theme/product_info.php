@@ -59,7 +59,7 @@
               $photoset_layout .= ($pi_total > 5) ? 5 : $pi_sub;
             }
     ?>
-    <div id="piGal" class="gallery"> <?php echo tep_caroucel_image(DIR_WS_IMAGES . $product_info['products_image'], addslashes($product_info['products_name']),'', PRODUCTINFO_IMAGE_WIDTH, PRODUCTINFO_IMAGE_HEIGHT, 'product-image'); ?>
+    <div id="piGal" class="gallery"> <div class="product-img-wrap"><?php echo tep_caroucel_image(DIR_WS_IMAGES . $product_info['products_image'], addslashes($product_info['products_name']),'', PRODUCTINFO_IMAGE_WIDTH, PRODUCTINFO_IMAGE_HEIGHT, 'product-image'); ?></div>
       <?php
             $pi_counter = 1;
             $pi_html = array();

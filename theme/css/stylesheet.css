@@ -209,7 +209,8 @@ select {
   .popup-container .product-info {
     position: relative;
     overflow: hidden;
-    min-height: 153px; }
+    min-height: 153px;
+    padding-bottom: 45px; }
   .popup-container .popup-button {
     position: absolute;
     left: 0px;
@@ -458,7 +459,7 @@ ul.rating {
     width: 25px;
     height: 25px;
     display: block;
-    background: whitesmoke;
+    background: none;
     cursor: pointer;
     font-style: normal;
     text-align: center;
@@ -745,12 +746,14 @@ h4.subheading {
 
 .gallery {
   position: relative; }
+  .gallery .product-img-wrap {
+    display: inline-block;
+    border: 1px solid #cccccc; }
   .gallery .product-image {
     max-width: 100%;
-    width: 262px !important;
-    height: 386px !important;
+    width: 260px !important;
+    height: 384px !important;
     display: inline-block;
-    border: 1px solid #cccccc;
     background: #fff; }
   .gallery #allImages {
     text-align: center;
@@ -764,6 +767,9 @@ h4.subheading {
       display: none; }
     .gallery #allImages.opened .closed {
       display: none; }
+
+.zoomContainer {
+  z-index: 1; }
 
 .oneImage .product-image {
   border: 1px solid #cccccc; }
@@ -1026,16 +1032,39 @@ h4.subheading {
     text-align: center; }
 
 #coProgressBar {
-  height: 10px;
+  height: 24px;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
   padding: 3px;
-  border-color: green; }
+  border-color: #cccccc; }
   #coProgressBar .ui-progressbar-value {
     margin: 0;
-    background: green;
-    border-color: green; }
+    background: #3C6;
+    position: relative;
+    z-index: 1;
+    border: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0; }
+    #coProgressBar .ui-progressbar-value:after {
+      content: '.';
+      text-indent: -5000px;
+      position: absolute;
+      right: -12px;
+      top: 0;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 12px;
+      border-color: transparent transparent transparent #3C6; }
+  #coProgressBar.last-step .ui-progressbar-value:after {
+    display: none; }
+
+.checkoutBarCurrent, .checkoutBarFrom {
+  color: green;
+  font-weight: bold; }
 
 /************************************* Banners boxes **************************************/
 .banner-box ul {

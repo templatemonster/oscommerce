@@ -145,7 +145,7 @@ function rowOutEffect(object) {
   $radio_buttons = 0;
   for ($i=0, $n=sizeof($selection); $i<$n; $i++) {
 ?>
-  <table class="table table-custom">
+  <table class="table t-payment table-custom <?php if($i==0) echo 'table-custom-first';?>">
     <?php
     if ( ($selection[$i]['id'] == $payment) || ($n == 1) ) {
       echo '      <tr id="defaultSelected" class="moduleRowSelected" onmouseover="rowOverEffect(this)" onmouseout="rowOutEffect(this)" onclick="selectRowEffect(this, ' . $radio_buttons . ')">' . "\n";
@@ -200,8 +200,8 @@ function rowOutEffect(object) {
     <div id="coProgressBar"></div>
     <table class="order-steps-name">
       <tr>
-        <td class="checkoutBarCurrent"><?php echo CHECKOUT_BAR_DELIVERY; ?></td>
-        <td class="checkoutBarTo"><?php echo CHECKOUT_BAR_PAYMENT; ?></td>
+        <td class="checkoutBarFrom"><?php echo '<a href="' . tep_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL') . '" class="checkoutBarFrom">' . CHECKOUT_BAR_DELIVERY . '</a>'; ?></td>
+        <td class="checkoutBarCurrent"><?php echo CHECKOUT_BAR_PAYMENT; ?></td>
         <td class="checkoutBarTo"><?php echo CHECKOUT_BAR_CONFIRMATION; ?></td>
       </tr>
     </table>
