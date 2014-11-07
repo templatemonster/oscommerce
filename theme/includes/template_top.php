@@ -127,6 +127,9 @@
 				}
 			});
           </script>
+          <script type="text/javascript">
+		  	productWidth = <?php echo $oscTemplate->getProductWidth()?>;
+		  </script>
           <link rel="stylesheet" media="screen" href="css/superfish.css" />
         <?php // End superfish categories box  ?>
         <?php echo $oscTemplate->getBlocks('header_tags'); ?>
