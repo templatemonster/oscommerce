@@ -1090,12 +1090,12 @@ h4.subheading {
 	.product-img-wrap {
 		display:inline-block;
 		border:1px solid $base-border-color;
+		position:relative;
+		z-index:1;
 	}
 	
 	.product-image {
 		max-width:100%;
-		width:260px !important;
-		height:384px !important;
 		display:inline-block;
 		background:#fff;
 	}

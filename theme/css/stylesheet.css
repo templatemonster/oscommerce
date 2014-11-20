@@ -748,11 +748,11 @@ h4.subheading {
   position: relative; }
   .gallery .product-img-wrap {
     display: inline-block;
-    border: 1px solid #cccccc; }
+    border: 1px solid #cccccc;
+    position: relative;
+    z-index: 1; }
   .gallery .product-image {
     max-width: 100%;
-    width: 260px !important;
-    height: 384px !important;
     display: inline-block;
     background: #fff; }
   .gallery #allImages {
