@@ -121,8 +121,10 @@
 				});
 				categoriesToggle();
 				
-				var stickMenu = false;
-				if(stickMenu) {
+				var stickMenu = true;
+				var isMenu = $('body').find('#top-menu').html();
+				if(stickMenu && typeof(isMenu) != 'undefined') {
+					alert();
 					$('.sf-menu').tmStickUp();
 				}
 			});

@@ -180,7 +180,7 @@
 			private function generate_box()
 			{
 				global $language;
-				$module_contents = '<div class="sf-container clearfix">' . PHP_EOL;
+				$module_contents = '<div id="top-menu" class="sf-container clearfix">' . PHP_EOL;
 				// Add a header and title if one is provided in the admin
 				//$title           = constant('MODULE_BOXES_CATEGORIES_SUPERFISH_FRONT_TITLE');
 				// Get the category tree array
