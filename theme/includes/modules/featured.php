@@ -99,6 +99,7 @@ if( defined('FEATURED_PRODUCTS_DISPLAY') AND FEATURED_PRODUCTS_DISPLAY == 'true'
 	  } else {
 		$p_desc_grid ='';	  
 	  }
+	  	$products_price_new = '';
 		// If on special show regular and sale price
 		if (tep_not_null($featured_products['specials_new_products_price'])) {
 			$products_price = $currencies->display_price($featured_products['products_price'], tep_get_tax_rate($featured_products['products_tax_class_id']));
