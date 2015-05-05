@@ -234,7 +234,7 @@
 </div>
 </form>
 <?php 
-	$tags_query = tep_db_query("select p.tag_id, t.tag_text, count(*) from ". TABLE_PRODUCTS_TAGS ." p, ". TABLE_TAGS ." t where p.tag_id = t.tag_id group by p.tag_id order by count(*) desc limit 15" );
+	$tags_query = tep_db_query("select p.tag_id, t.tag_text, count(*) from ". TABLE_PRODUCTS_TAGS ." p, ". TABLE_TAGS ." t where p.tag_id = t.tag_id and p.products_id = ".(int)$HTTP_GET_VARS['products_id']." group by p.tag_id order by count(*) desc limit 15" );
 	if(tep_db_num_rows($tags_query) > 1) {
 	$data='';
 	while ($tags = tep_db_fetch_array($tags_query)) {
