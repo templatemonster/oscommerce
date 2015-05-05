@@ -8,7 +8,6 @@
 
 // needs to be included earlier to set the success message in the messageStack
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_ACCOUNT_PASSWORD);
-  $current_page = FILENAME_ACCOUNT_PASSWORD;
 
   if (isset($HTTP_POST_VARS['action']) && ($HTTP_POST_VARS['action'] == 'process') && isset($HTTP_POST_VARS['formid']) && ($HTTP_POST_VARS['formid'] == $sessiontoken)) {
     $password_current = tep_db_prepare_input($HTTP_POST_VARS['password_current']);

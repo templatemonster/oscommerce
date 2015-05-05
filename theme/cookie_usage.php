@@ -2,7 +2,6 @@
   require('includes/application_top.php');
 
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_COOKIE_USAGE);
-  $current_page = FILENAME_COOKIE_USAGE;
 
   $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_COOKIE_USAGE));
 

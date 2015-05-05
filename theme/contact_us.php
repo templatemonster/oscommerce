@@ -2,7 +2,6 @@
   require('includes/application_top.php');
 
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_CONTACT_US);
-  $current_page = FILENAME_CONTACT_US;
 
   if (isset($HTTP_GET_VARS['action']) && ($HTTP_GET_VARS['action'] == 'send') && isset($HTTP_POST_VARS['formid']) && ($HTTP_POST_VARS['formid'] == $sessiontoken)) {
     $error = false;

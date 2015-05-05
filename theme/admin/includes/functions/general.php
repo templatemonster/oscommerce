@@ -1493,7 +1493,8 @@
         if($file != '.' && $file != '..' && !is_dir($file) && (substr($file, -3, 3) == 'php') && !in_array($file, $exclude)) {  
             $result[] = $file;
         }
-    }    
+    }
+	$result[] = 'categories';
     $d->close();    
     return $result;
   }

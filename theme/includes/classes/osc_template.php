@@ -102,6 +102,8 @@
 
               $mb = new $class();
 
+				if(!$current_page)
+					$current_page = $PHP_SELF;
               // bof Dynamic Template System
               if(!isset($mb->pages) && ($mb->isEnabled())){
                 $this->pages = 'all';              

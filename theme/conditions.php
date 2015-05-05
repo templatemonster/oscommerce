@@ -2,7 +2,6 @@
   require('includes/application_top.php');
 
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_CONDITIONS);
-  $current_page = FILENAME_CONDITIONS;
 
   $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_CONDITIONS));
 

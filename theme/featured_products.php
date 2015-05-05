@@ -13,7 +13,7 @@
   require('includes/application_top.php');
 
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_FEATURED_PRODUCTS);
-  $current_page = FILENAME_FEATURED_PRODUCTS;
+
   $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_FEATURED_PRODUCTS));
 
   require(DIR_WS_INCLUDES . 'template_top.php');  

@@ -14,7 +14,6 @@
 
   // needs to be included earlier to set the success message in the messageStack
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_CHECKOUT_SHIPPING_ADDRESS);
-  $current_page = FILENAME_CHECKOUT_SHIPPING_ADDRESS;
 
   require(DIR_WS_CLASSES . 'order.php');
   $order = new order;

@@ -2,7 +2,6 @@
   require('includes/application_top.php');
 
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_ADVANCED_SEARCH);
-  $current_page = FILENAME_ADVANCED_SEARCH;
 
   $error = false;
 

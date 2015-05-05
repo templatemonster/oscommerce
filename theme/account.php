@@ -7,7 +7,7 @@
   }
 
   require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_ACCOUNT);
-  $current_page = FILENAME_ACCOUNT;
+
   $breadcrumb->add(NAVBAR_TITLE, tep_href_link(FILENAME_ACCOUNT, '', 'SSL'));
 
   require(DIR_WS_INCLUDES . 'template_top.php');
