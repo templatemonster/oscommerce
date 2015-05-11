@@ -506,6 +506,11 @@
     return $languages_array;
   }
 
+  function tep_check_language_file($language) {
+    if(file_exists(DIR_WS_LANGUAGES.$language.'.php'))
+   	  return true;
+	return false;
+  }
   function tep_get_category_name($category_id, $language_id) {
     $category_query = tep_db_query("select categories_name from " . TABLE_CATEGORIES_DESCRIPTION . " where categories_id = '" . (int)$category_id . "' and language_id = '" . (int)$language_id . "'");
     $category = tep_db_fetch_array($category_query);

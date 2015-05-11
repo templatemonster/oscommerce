@@ -16,6 +16,8 @@
   $languages_array = array();
   $languages_selected = DEFAULT_LANGUAGE;
   for ($i = 0, $n = sizeof($languages); $i < $n; $i++) {
+	if(!tep_check_language_file($languages[$i]['directory']))
+		continue;
     $languages_array[] = array('id' => $languages[$i]['code'],
                                'text' => $languages[$i]['name']);
     if ($languages[$i]['directory'] == $language) {
