@@ -119,11 +119,11 @@
     include(DIR_WS_CLASSES . 'language.php');
     $lng = new language();
 
-    if (isset($HTTP_GET_VARS['language']) && tep_not_null($HTTP_GET_VARS['language'])) {
+    //if (isset($HTTP_GET_VARS['language']) && tep_not_null($HTTP_GET_VARS['language'])) {
       $lng->set_language($HTTP_GET_VARS['language']);
-    } else {
+    /*} else {
       $lng->get_browser_language();
-    }
+    }*/
 
     $language = $lng->language['directory'];
     $languages_id = $lng->language['id'];
