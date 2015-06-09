@@ -69,7 +69,7 @@ define('MALE_ADDRESS', 'Herr');
 define('FEMALE_ADDRESS', 'Frau');
 
 // text for date of birth example
-define('DOB_FORMAT_STRING', 'dd/mm/jjjj');
+define('DOB_FORMAT_STRING', 'dd/mm/yyyy');
 
 // checkout procedure text
 define('CHECKOUT_BAR_DELIVERY', 'Versandinformationen');
