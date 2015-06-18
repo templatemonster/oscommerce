@@ -21,12 +21,12 @@
   $tag_text="";
   $tags_query = tep_db_query("select * from ". TABLE_TAGS ." where tag_id='". $tag_id ."'");
   while ($tags_result = tep_db_fetch_array($tags_query)) {
-    $tag_text=$tags_result['tag_text'];
+    $tag_text = urldecode($tags_result['tag_text']);
   }
   
 ?>
 
-<h1 class="page-heading product-list"><?php echo MODULE_BOXES_TAG_PAGE_TITLE . " \"". $tag_text ."\""; ?></h1>
+<h1 class="page-heading product-list"><?php echo MODULE_BOXES_TAG_PAGE_TITLE. " \"".$tag_text."\""; ?></h1>
 <div class="block-content">
   <?php
 
