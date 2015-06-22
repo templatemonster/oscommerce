@@ -23,7 +23,11 @@
         $products_id = tep_db_prepare_input($HTTP_POST_VARS['products_id']);
         $tags_name = tep_db_prepare_input($HTTP_POST_VARS['tags_name']);
 				//echo "tags_name=".$tags_name."<br/>";
+		if (!$tags_name) // redirect if empry tags
+			tep_redirect(tep_href_link(FILENAME_TAGS, 'page=' . $HTTP_GET_VARS['page'] . '&sID=' . $products_id));
+
         $tags_arr=explode(",", $tags_name);
+
         foreach ($tags_arr as $tag) {
           $flag_tag=0;
           $flag_tag_product=0;
@@ -89,9 +93,26 @@
         tep_redirect(tep_href_link(FILENAME_TAGS, 'page=' . $HTTP_GET_VARS['page'] . '&sID=' . $tag_id));
         break;
       case 'deleteconfirm':
-        $tag_id = tep_db_prepare_input($HTTP_GET_VARS['sID']);
+        $product_id = tep_db_prepare_input($HTTP_GET_VARS['sID']);
 
-        tep_db_query("delete from products_tags where products_id = '" . (int)$tag_id . "'");
+		// check if other product use tag, if not delete it
+
+		$tags_query = tep_db_query("select * from ".TABLE_PRODUCTS_TAGS." where products_id = '".(int)$product_id."'");
+
+		while ($tags = tep_db_fetch_array($tags_query))
+		{
+			$tag_query = tep_db_query("select * from ".TABLE_PRODUCTS_TAGS." where tag_id = '".(int)$tags['tag_id']."' and products_id != '".(int)$product_id."'");
+			if (tep_db_num_rows($tag_query))
+			{
+				continue;
+			}
+			else
+			{
+				tep_db_query("delete from ".TABLE_TAGS." where tag_id = '".(int)$tags['tag_id']."'");
+			}
+		}
+
+        tep_db_query("delete from products_tags where products_id = '" .(int)$product_id. "'");
 
         tep_redirect(tep_href_link(FILENAME_TAGS, 'page=' . $HTTP_GET_VARS['page']));
         break;

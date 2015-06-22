@@ -173,6 +173,27 @@
           tep_reset_cache_block('also_purchased');
         }
 
+		/** delete all related tags */
+			// get all tags
+		$tags_query = tep_db_query("select * from ".TABLE_PRODUCTS_TAGS." where products_id = '".(int)$product_id."'");
+		
+
+		while ($tags = tep_db_fetch_array($tags_query))
+		{
+			// check if other product use this tag
+			$tag_query = tep_db_query("select * from ".TABLE_PRODUCTS_TAGS." where tag_id = '".(int)$tags['tag_id']."' and products_id != '".(int)$product_id."'");
+			if (tep_db_num_rows($tag_query))
+			{
+				continue;	
+			}
+			else
+			{
+				tep_db_query("delete from ".TABLE_TAGS." where tag_id = '".(int)$tags['tag_id']."'");
+			}
+		}
+
+		tep_db_query("delete from ".TABLE_PRODUCTS_TAGS." where products_id = '".(int)$product_id."'");
+
         tep_redirect(tep_href_link(FILENAME_CATEGORIES, 'cPath=' . $cPath));
         break;
       case 'move_category_confirm':
