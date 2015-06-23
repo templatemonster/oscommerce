@@ -661,14 +661,14 @@ INSERT INTO `configuration` (`configuration_id`, `configuration_title`, `configu
 (573, '<strong>Product Listing Default View (grid/list)</strong>', 'LISTING_VIEW_TYPE', 'list', 'Product Listing Default View', 8, 12, '2014-08-13 17:15:23', '2014-06-30 14:38:15', NULL, 'tep_cfg_select_option(array(''list'', ''grid''),'),
 (574, '<strong>Bestseller Products Listing</strong>', 'MAX_DISPLAY_PRODUCTS_BESTSELLER', '6', 'Maximum number of bestsellers to display in bestsellers page', 3, 22, '2014-07-10 11:16:19', '2014-06-30 14:38:14', NULL, NULL),
 (575, 'Effect', 'EFFECT_NIVO', 'random', 'random, sliceDownRight, sliceDownLeft, sliceUpRight, sliceUpLeft, sliceUpDown, sliceUpDownLeft, fold, fade, boxRandom, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse', 100, 1, '2013-05-24 00:30:00', '2013-05-24 00:30:00', NULL, 'tep_cfg_select_option(array(''random'', ''sliceDownRight'', ''sliceDownLeft'', ''sliceUpRight'', ''sliceUpLeft'', ''sliceUpDown'', ''sliceUpDownLeft'', ''fold'', ''fade'', ''boxRandom'', ''boxRain'', ''boxRainReverse'', ''boxRainGrow'', ''boxRainGrowReverse''), '),
-(576, 'Delay', 'DELAY_NIVO', '5000', 'Delay between images in ms', 100, 2, NULL, '2013-05-24 00:30:00', NULL, NULL),
+(576, 'Autoplay', 'DELAY_NIVO', '5000', 'Delay between slides', 100, 2, NULL, '2013-05-24 00:30:00', NULL, NULL),
 (577, 'Box Columns', 'BOX_COLS', '8', 'Quantity of columns', 100, 3, '2013-05-24 00:30:00', '2013-05-24 00:30:00', NULL, NULL),
 (578, 'Box Rows', 'BOX_ROWS', '4', 'Quantity of rows', 100, 4, NULL, '2013-05-24 00:30:00', NULL, NULL),
 (579, 'Control Navigation', 'CONTROLNAV_NIVO', 'true', 'Show control 1,2,3...', 100, 5, NULL, '2013-05-24 00:30:00', NULL, 'tep_cfg_select_option(array(''true'', ''false''), '),
 (580, 'Navigation', 'NAVIGATION_NIVO', 'true', 'Show navigation prev next', 100, 6, '2013-05-24 00:30:00', '2013-05-24 00:30:00', NULL, 'tep_cfg_select_option(array(''true'', ''false''), '),
 (581, 'Slices', 'SLICES_NIVO', '15', 'Quantity of slices on which is cut a slide during animation', 100, 7, '2013-05-24 00:30:00', '2013-05-24 00:30:00', NULL, NULL),
 (582, 'Hover Pause', 'HOVERPAUSE_NIVO', 'true', 'Stop animation while hovering', 100, 8, NULL, '2013-05-24 00:30:00', NULL, 'tep_cfg_select_option(array(''true'', ''false''), '),
-(583, 'Delay', 'SDELAY_NIVO', '500', 'Delay beetwen slides in ms', 100, 9, NULL, '2013-05-24 00:30:00', NULL, NULL),
+(583, 'Delay', 'SDELAY_NIVO', '500', 'Delay beetwen images in ms', 100, 9, NULL, '2013-05-24 00:30:00', NULL, NULL),
 (584, 'Direction Navigation Hide', 'DIRECTIONNAVHIDE', 'false', 'Show prev next only show on hover', 100, 10, '2014-07-18 17:32:54', '2013-05-24 00:30:00', NULL, 'tep_cfg_select_option(array(''true'', ''false''), '),
 (585, 'Start Slide', 'START_SLIDE', '0', 'Set starting Slide (0 index)', 100, 11, NULL, '2013-05-24 00:30:00', NULL, NULL),
 (586, 'Prev Text', 'PREV_NIVO', '', '', 100, 12, '2014-07-18 18:21:00', '2013-05-24 00:30:00', NULL, NULL),
@@ -2240,7 +2240,9 @@ CREATE TABLE IF NOT EXISTS `reviews` (
 
 INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_status`, `reviews_read`) VALUES
 (10, 1, 1, 'admin admin', 4, '2014-08-13 14:50:05', '2014-08-13 14:50:58', 1, 3),
-(11, 1, 1, 'admin admin', 3, '2014-08-13 15:29:09', '2014-08-13 15:29:28', 1, 5);
+(11, 1, 1, 'admin admin', 3, '2014-08-13 15:29:09', '2015-06-22 16:32:34', 1, 5),
+(12, 1, 1, 'admin admin', 4, '2015-06-22 16:30:58', '2015-06-22 16:32:36', 1, 0),
+(13, 1, 1, 'admin admin', 3, '2015-06-22 16:31:42', '2015-06-22 16:32:36', 1, 0);
 
 DROP TABLE IF EXISTS `reviews_description`;
 CREATE TABLE IF NOT EXISTS `reviews_description` (
@@ -2251,8 +2253,10 @@ CREATE TABLE IF NOT EXISTS `reviews_description` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `reviews_description` (`reviews_id`, `languages_id`, `reviews_text`) VALUES
-(10, 4, 'Not bed Not bed Not bed Not bed Not bed Not bed Not bed'),
-(11, 2, 'My feedback for this product to see some result! But no less that 50 symbols');
+(10, 4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et nulla at dolor interdum faucibus id non urna.'),
+(11, 2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et nulla at dolor interdum faucibus id non urna.'),
+(12, 3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et nulla at dolor interdum faucibus id non urna.'),
+(13, 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et nulla at dolor interdum faucibus id non urna.');
 
 DROP TABLE IF EXISTS `sec_directory_whitelist`;
 CREATE TABLE IF NOT EXISTS `sec_directory_whitelist` (
